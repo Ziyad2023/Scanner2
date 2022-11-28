@@ -23,14 +23,18 @@ public class ScannerReadCSVFile
         while (scanner.hasNext()) {
             // Read the next line of the file
             String line = scanner.nextLine();
-            System.out.println(line);
-
+            String[] array = line.split(",");
+            int c = 0;
+            String sect = "";
+            for(int i=0; i < array.length; i++) {
+                System.out.println(0);
+            }
             // line now contains a line of comma-separated numbers
             // representing 10 test scores for each class.
             //
             // Your job is to parse the numbers into individual test scores using
             // another Scanner variable using a comma as the delimiter.  
-            // 
+            
             // Read the ten test scores and average them together.  The first
             // number is the class number and the next 10 numbers are the 
             // test scores.  

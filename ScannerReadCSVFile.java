@@ -31,38 +31,38 @@ public class ScannerReadCSVFile
                 if (i == 0) {
                     sect = strArray[0];
                 } else {
-                    int [] numberArray = new int [size];
-                    for(int x=0; x<size; x++)                        numberArray[i] = Integer.parseInt(strArray[i]);
-                        c = c + numberArray[i];
-                    }
-                    //System.out.println(Arrays.toString(arr));
+                    int [] numberArray = new int [size];                      
+                    numberArray[i] = Integer.parseInt(strArray[i]);
+                    c = c + numberArray[i];
                 }
-                System.out.println(sect + " " + c);
+                //System.out.println(Arrays.toString(arr));
             }
+            System.out.println(sect + " " + c/10);
         }
-            // line now contains a line of comma-separated numbers
-            // representing 10 test scores for each class.
-            //
-            // Your job is to parse the numbers into individual test scores using
-            // another Scanner variable using a comma as the delimiter.  
+    }
+    // line now contains a line of comma-separated numbers
+    // representing 10 test scores for each class.
+    //
+    // Your job is to parse the numbers into individual test scores using
+    // another Scanner variable using a comma as the delimiter.  
 
-            // Read the ten test scores and average them together.  The first
-            // number is the class number and the next 10 numbers are the 
-            // test scores.  
-            //
-            // You need to compute the average and print for each class the class
-            // number, then the average score.  The first few lines should look
-            // like this:
-            //
-            // Class: Avg score
-            // 2125:  55
-            // 1628:  47
-            //
-            // Pay attention to the spacing on your output
-            //
-            // Write your code in the space below!
+    // Read the ten test scores and average them together.  The first
+    // number is the class number and the next 10 numbers are the 
+    // test scores.  
+    //
+    // You need to compute the average and print for each class the class
+    // number, then the average score.  The first few lines should look
+    // like this:
+    //
+    // Class: Avg score
+    // 2125:  55
+    // 1628:  47
+    //
+    // Pay attention to the spacing on your output
+    //
+    // Write your code in the space below!
 
-        public static void main (String[] args) {
+    public static void main (String[] args) {
         try {
             ScannerReadCSVFile srCsv = new ScannerReadCSVFile();
             srCsv.run();
